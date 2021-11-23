@@ -290,7 +290,7 @@ def ham(update, context):
         numb = msg
         amos = amb
         url = "https://job2all.xyz/api/index.php"
-        response = requests.post(url, data = post_data, "body": { number: numb, amount: amo }).json()
+        response = requests.post(url, data = post_data, body = { number: numb, amount: amo }).json()
         asd=response['status']
         if asd=="Payment Succesful Transfer":
             i = str(data["id"][user])
