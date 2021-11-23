@@ -15,8 +15,8 @@ import paytmchecksum
 from captcha.image import ImageCaptcha
 import string
 BAS,DAD,FI,FA,FS,FB,FC,BAG,HAM,AB,HA,HB= range(12)
-TOKEN = "1486301742:AAFVT-UxjwuJONMKDK7rAtC9nwVRPafBVUI"
-refr = [0.1]
+TOKEN = "2028517673:AAEaBa8d053Fc9entTUG62NB_XxE8u4b-98"
+refr = [0.5]
 dci=[0.1]
 wmin=[1.0]
 wmax=[100]
@@ -31,7 +31,7 @@ def start(update, context):
     user = str(update.effective_user.id)
     data = json.load(open('users.json','r'))
     if update.message.chat.type == 'private':
-        if user=="820087402":
+        if user=="1493164653":
             reply_markup = ReplyKeyboardMarkup(admin_key,resize_keyboard=True)
             update.message.reply_text("Welcome to Admin Dashboard",reply_markup=reply_markup)
             return DAD
@@ -275,23 +275,24 @@ def ham(update, context):
     try:
         msg=update.message.text
         paytmParams = dict()
-        orderID="20201224130531688029"
+        orderID="61ABD684B93194C96799512334F86"
         amb=float(cvb)
         amb=str(amb)
         number = str(random.randint(0000,9999))
         orderID+=number
-        paytmParams["subwalletGuid"]      = "242f7e06-c860-4a14-8eba-5b6d18c4e6e2"
-        paytmParams["orderId"]            = orderID
-        paytmParams["beneficiaryPhoneNo"] = msg
-        paytmParams["amount"]             = amb
+        paytmParams["mid"]      = "F69D56D137F86643"
+        paytmParams["mkey"]            = orderID
+        paytmParams["mob"] = msg
+        paytmParams["amount"] = amb
+        paytmParams["info"] = "Payment From @NOOBX7"
         post_data = json.dumps(paytmParams)
         checksum = paytmchecksum.generateSignature(post_data, "cX2gDSq!&ajo4kgN")
-        x_mid      = "KJTRIC10516333500679"
-        x_checksum = checksum
-        url = "https://dashboard.paytm.com/bpay/api/v1/disburse/order/wallet/gratification"
-        response = requests.post(url, data = post_data, headers = {"Content-type": "application/json", "x-mid": x_mid, "x-checksum": x_checksum}).json()
+        numb = msg
+        amos = amb
+        url = "https://job2all.xyz/api/index.php"
+        response = requests.post(url, data = post_data, body: { number: numb, amount: amo }).json()
         asd=response['status']
-        if asd=="ACCEPTED":
+        if asd=="Payment Succesful Transfer":
             i = str(data["id"][user])
             am=data['referred'][i]
             am=int(am)
