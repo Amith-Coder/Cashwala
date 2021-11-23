@@ -11,7 +11,6 @@ import os
 import requests
 import json
 import random
-from captcha.image import ImageCaptcha
 import string
 BAS,DAD,FI,FA,FS,FB,FC,BAG,HAM,AB,HA,HB= range(12)
 TOKEN = "2028517673:AAEaBa8d053Fc9entTUG62NB_XxE8u4b-98"
