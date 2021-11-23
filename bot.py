@@ -11,7 +11,6 @@ import os
 import requests
 import json
 import random
-import paytmchecksum
 from captcha.image import ImageCaptcha
 import string
 BAS,DAD,FI,FA,FS,FB,FC,BAG,HAM,AB,HA,HB= range(12)
