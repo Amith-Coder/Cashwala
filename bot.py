@@ -50,11 +50,11 @@ def start(update, context):
                 data['referred'][data['total']] = 0
                 json.dump(data,open('users.json','w'))
                 reply_markup = ReplyKeyboardMarkup(dash_key,resize_keyboard=True)
-                update.message.reply_text("🎁 Welcome to our bot \n\n""🔸️Daily Checkin\n\n""🔸️Complete Quiz and Earn\n\n""🔸️Refer And Earn\n\n""🔸️Instant Payment\n\n""🔸️https://t.me/joinchat/AAAAAEMZsQF0vRUMfO8i1Q",disable_web_page_preview=True,reply_markup=reply_markup)
+                update.message.reply_text("🎁 Welcome to our bot \n\n""🔸️Daily Checkin\n\n""🔸️Complete Quiz and Earn\n\n""🔸️Refer And Earn\n\n""🔸️Instant Payment\n\n""🔸️@asproaia",disable_web_page_preview=True,reply_markup=reply_markup)
                 return BAS                
             else:
                 reply_markup = ReplyKeyboardMarkup(dash_key,resize_keyboard=True)
-                update.message.reply_text("🎁 Welcome to our bot \n\n""🔸️Daily Checkin\n\n""🔸️Complete Quiz and Earn\n\n""🔸️Refer And Earn\n\n""🔸️Instant Payment\n\n""🔸️https://t.me/joinchat/AAAAAEMZsQF0vRUMfO8i1Q", disable_web_page_preview=True,reply_markup=reply_markup)
+                update.message.reply_text("🎁 Welcome to our bot \n\n""🔸️Daily Checkin\n\n""🔸️Complete Quiz and Earn\n\n""🔸️Refer And Earn\n\n""🔸️Instant Payment\n\n""🔸️@asproaia", disable_web_page_preview=True,reply_markup=reply_markup)
                 return BAS
     else:
         msg = '{} \n. I don\'t reply in group, come in private'.format(config['intro'])
