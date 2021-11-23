@@ -376,7 +376,7 @@ if __name__ == '__main__':
             FS: [MessageHandler(Filters.text, fs)],
             FB: [MessageHandler(Filters.text, fb)],
             FC: [MessageHandler(Filters.text, fc)],
-            AB: [MessageHandler(Filters.text, ab)],
+            AB: [MessageHandler(Filters.text, AB)],
             BAG: [MessageHandler(Filters.text, bag)],
             HA: [MessageHandler(Filters.text, ha)],
             HB: [MessageHandler(Filters.text, hb)],
